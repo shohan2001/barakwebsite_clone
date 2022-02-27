@@ -1,0 +1,25 @@
+.content {
+    height: 180px;
+    background-color: black;
+    padding: 0;
+    margin: 0;
+}
+
+.mainwrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 42px;
+    padding-left: 102px;
+    padding-right: 102px;
+}
+
+.barakLogo {
+    width: 78px;
+    height: 85.11px;
+}
+
+.iitLogo {
+    width: 78px;
+    height: 85.11px;
+}
