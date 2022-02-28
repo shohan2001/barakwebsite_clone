@@ -6,7 +6,13 @@ function App() {
     return (
         <div className="App">
             <Navbar />
-
+            <div
+                style={{
+                    width: "100%",
+                    height: "400px",
+                    backgroundColor: "white",
+                }}
+            ></div>
             <Achievements />
             <div
                 style={{

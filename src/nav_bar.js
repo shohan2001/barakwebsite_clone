@@ -7,7 +7,8 @@ const NavBar = () => {
         <div className={Nav.NavBar}>
             <div className={Nav.Title}>
                 {" "}
-                <img src={Logo} alt="" />{" "}
+                <img src={Logo2} alt="" />
+                <img src={Logo} alt="" className={Nav.Logo1} />{" "}
             </div>
             <ul className={Nav.NavLinks}>
                 <li>
