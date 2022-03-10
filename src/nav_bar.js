@@ -33,6 +33,9 @@ const NavBar = () => {
                     {" "}
                     <a href="/">Contact</a>
                 </li>
+                <li className={Nav.Login2}>
+                    <a href="/">Login</a>
+                </li>
             </ul>
             <div className={Nav.Login}>
                 <a href="/">Login</a>
