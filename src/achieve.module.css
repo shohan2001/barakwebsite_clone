@@ -62,7 +62,7 @@
     }
     .content {
         font-size: 1em;
-        height: 1000px;
+        height: 1500px;
     }
     .gridContainer {
         flex-direction: column;
@@ -71,5 +71,7 @@
     }
     .wrapper {
         padding: 20px 0;
+        flex-direction: row;
+        font-size: 20px;
     }
 }

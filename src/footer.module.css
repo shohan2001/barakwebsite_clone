@@ -23,3 +23,75 @@
     width: 78px;
     height: 85.11px;
 }
+
+.icons {
+    display: flex;
+    justify-content: space-between;
+    width: 230px;
+    align-items: center;
+}
+
+.Barak2 {
+    width: 135px;
+    height: 18.97px;
+}
+
+.wrapper {
+    display: flex;
+    color: #f5f4f4;
+    font-family: Montserrat;
+    justify-content: space-between;
+    width: 672px;
+    height: 94px;
+    align-items: start;
+}
+
+.wrapper h1 {
+    font-family: Montserrat;
+    font-weight: 500;
+    font-size: 12px;
+    padding-bottom: 4px;
+    padding-top: 15px;
+}
+
+.wrapper h2 {
+    font-family: Montserrat;
+    font-weight: 300;
+    font-size: 11px;
+    padding-bottom: 2px;
+}
+
+.socialmedia {
+    display: flex;
+
+    align-items: center;
+}
+
+.socialmedia img {
+    width: 24px;
+    height: 28px;
+    padding-right: 13px;
+}
+
+.bottom {
+    display: flex;
+    color: #f5f4f4;
+
+    font-family: Montserrat;
+    font-weight: 300;
+    font-size: 12px;
+    align-items: center;
+    justify-content: center;
+}
+.bottom ul {
+    padding-left: 38px;
+}
+.bottom li {
+    text-decoration: none;
+    display: inline-block;
+    padding: 0 8px;
+}
+
+.bottom li :nth-of-type(1) {
+    padding-left: 200px;
+}

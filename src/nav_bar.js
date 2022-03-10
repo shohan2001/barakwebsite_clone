@@ -1,8 +1,10 @@
 import Nav from "./navbar.module.css";
 import Logo from "./Vector.png";
 import Logo2 from "./LOGONAV.png";
+import { useState } from "react";
 
 const NavBar = () => {
+    const [fg, setfg] = useState(0);
     return (
         <div className={Nav.NavBar}>
             <div className={Nav.Title}>
@@ -10,7 +12,7 @@ const NavBar = () => {
                 <img src={Logo2} alt="" />
                 <img src={Logo} alt="" className={Nav.Logo1} />{" "}
             </div>
-            <ul className={Nav.NavLinks}>
+            <ul className={fg === 0 ? Nav.NavLinks : Nav.NavLinks2}>
                 <li>
                     {" "}
                     <a href="/">Home</a>
@@ -33,10 +35,19 @@ const NavBar = () => {
                 </li>
             </ul>
             <div className={Nav.Login}>
-                {" "}
                 <a href="/">Login</a>
             </div>
-            <div className={Nav.burger}>
+
+            <div
+                className={Nav.burger}
+                onClick={() => {
+                    if (fg == 0) {
+                        setfg(1);
+                    } else {
+                        setfg(0);
+                    }
+                }}
+            >
                 <div></div>
                 <div></div>
                 <div></div>

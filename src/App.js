@@ -1,18 +1,16 @@
 import Navbar from "./nav_bar";
 import Achievements from "./Achievments";
 import Footer from "./Footer";
+import Hmc from "./hmcSlider";
+import HmcHeader from "./hmcHeader";
 
 function App() {
     return (
         <div className="App">
             <Navbar />
-            <div
-                style={{
-                    width: "100%",
-                    height: "400px",
-                    backgroundColor: "white",
-                }}
-            ></div>
+            <HmcHeader />
+            <Hmc />
+
             <Achievements />
             <div
                 style={{
