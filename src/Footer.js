@@ -50,15 +50,28 @@ const Footer = () => {
             </div>
             <div className={footCss.bottom}>
                 <ul>
-                    <li>Terms of Use </li>
+                    <li>
+                        <a href="/"> Terms of Use </a>
+                    </li>
                     <li>|</li>
-                    <li>Cookies</li>
+                    <li>
+                        <a href="/">Cookies </a>
+                    </li>
                     <li>|</li>
-                    <li>Privacy</li>
+                    <li>
+                        {" "}
+                        <a href="/">Privacy </a>
+                    </li>
                     <li>|</li>
-                    <li>About Us</li>
+                    <li>
+                        {" "}
+                        <a href="/">About Us</a>
+                    </li>
                     <li>|</li>
-                    <li>Contact Us</li>
+                    <li>
+                        {" "}
+                        <a href="/">Contact Us</a>
+                    </li>
                 </ul>
             </div>
         </div>

@@ -16,8 +16,8 @@
     font-size: 4em;
     line-height: 73px;
     letter-spacing: -0.015em;
-    padding-top: 85px;
-    padding-bottom: 85px;
+    padding-top: 5.9027777778%;
+    padding-bottom: 4.375%;
     text-align: center;
 
     color: #ffffff;
@@ -26,6 +26,7 @@
 .gridContainer {
     display: flex;
     justify-content: center;
+    padding: 0 13.1597222222%;
 }
 
 .heading {
@@ -36,22 +37,20 @@
 }
 
 .des {
-    width: 316px;
-
+    width: 100%;
     font-family: "Montserrat", sans-serif;
     font-weight: 300;
     margin: 10px 0;
 }
 
 .wrapper img {
-    height: 15rem;
-    width: 18rem;
+    width: 100%;
 }
 
 .wrapper {
     display: flex;
     flex-direction: column;
-    padding: 0 21px;
+    padding: 0 2.0263901979%;
 }
 
 @media screen and (max-width: 764px) {
