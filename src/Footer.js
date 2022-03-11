@@ -53,21 +53,21 @@ const Footer = () => {
                     <li>
                         <a href="/"> Terms of Use </a>
                     </li>
-                    <li>|</li>
+                    <li className={footCss.dash}>|</li>
                     <li>
                         <a href="/">Cookies </a>
                     </li>
-                    <li>|</li>
+                    <li className={footCss.dash}>|</li>
                     <li>
                         {" "}
                         <a href="/">Privacy </a>
                     </li>
-                    <li>|</li>
+                    <li className={footCss.dash}>|</li>
                     <li>
                         {" "}
                         <a href="/">About Us</a>
                     </li>
-                    <li>|</li>
+                    <li className={footCss.dash}>|</li>
                     <li>
                         {" "}
                         <a href="/">Contact Us</a>

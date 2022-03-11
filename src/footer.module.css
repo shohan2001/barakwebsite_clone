@@ -60,7 +60,6 @@
     font-weight: 300;
     font-size: 11.5px;
     padding-bottom: 2.127%;
-    width: ;
 }
 
 .socialmedia {
@@ -107,9 +106,13 @@
     font-family: Montserrat;
 }
 
-@media screen and (max-width: 764px) {
+.bottom li a:hover {
+    text-decoration: underline;
+}
+
+@media screen and (max-width: 950px) {
     .content {
-        height: 590px;
+        height: 598px;
         font-size: 13px;
     }
 
@@ -127,7 +130,7 @@
         margin: 0 0;
         font-size: 12px;
         align-items: center;
-        padding-bottom: 25px;
+        padding-bottom: 16px;
     }
     .wrapper h1 {
         text-align: center;
@@ -138,6 +141,7 @@
         text-align: center;
     }
     .Barak2 {
+        padding-top: 8px;
         width: 38.7%;
         height: 18.97px;
         padding-bottom: 10px;
@@ -157,5 +161,25 @@
     .iitgLogo {
         width: 60px;
         height: 60px;
+        padding-top: 8px;
+    }
+}
+
+@media screen and (max-width: 490px) {
+    .content {
+        height: 728px;
+        font-size: 13px;
+    }
+
+    .bottom ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 9px;
+    }
+    .dash {
+        display: none;
+        opacity: 0;
     }
 }
