@@ -9,7 +9,7 @@ const NavBar = () => {
         <div className={Nav.NavBar}>
             <div className={Nav.Title}>
                 {" "}
-                <img src={Logo2} alt="" />
+                <img src={Logo2} alt="" className={Nav.Logo2} />
                 <img src={Logo} alt="" className={Nav.Logo1} />{" "}
             </div>
             <ul className={fg === 0 ? Nav.NavLinks : Nav.NavLinks2}>
