@@ -170,6 +170,7 @@
         display: flex;
         align-items: center;
         justify-content: space-evenly;
+        margin-left: 3%;
     }
     .Logo1 {
         width: 60%;
@@ -178,5 +179,8 @@
     }
     .Logo2 {
         width: 30%;
+    }
+    .burger {
+        margin-right: 3%;
     }
 }
