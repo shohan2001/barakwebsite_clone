@@ -1,59 +1,81 @@
-import hmc from "./hmc_style.module.css";
+import { CarouselWrapper, prev, next, q } from "react-pretty-carousel";
 
-import "./App.css";
-import ReactDOM from "react-dom";
-import Slider from "react-slick";
-import { useState } from "react";
-import imag from "./assets/image.png";
+import React, { useState, useEffect } from "react";
+import slide from "./hmc_style.module.css";
+
+import image1 from "./image 41.png";
+import image2 from "./image 42.png";
+import image3 from "./image 47.png";
+
 import leftArrow from "./assets/leftArrow.png";
 import rightArrow from "./assets/rightArrow.png";
 
-const images = [imag, imag, imag, imag];
+const HmcSlider = () => {
+    const images = [image1, image2, image3, image1, image2, image3, image2];
+    const [currIndex, setCurrIndex] = useState(3);
+    const names = [
+        "Warden",
+        "Secretary",
+        "Watchman",
+        "Gaurd",
+        "Secretary",
+        "Watchman",
+        "Gaurd",
+    ];
 
-const PrevArrow = ({ onClick }) => {
+    const [items, setItems] = useState(5);
+
+    useEffect(() => {
+        if (window.innerWidth < 400) setItems(1);
+        else setItems(5);
+        window.addEventListener("resize", () => {
+            if (window.innerWidth < 690) setItems(3);
+            else setItems(5);
+        });
+    }, []);
+
     return (
-        <div className={hmc.arrowLeft} onClick={onClick}>
-            <img src={leftArrow} alt="" />
+        <div className={slide.container}>
+            <CarouselWrapper items={items} mode="gallery" showControls={false}>
+                {images.map((img, ind) => (
+                    <img src={img} className={slide.image} />
+                ))}
+            </CarouselWrapper>
+            <div className={slide.arrows}>
+                <img
+                    src={leftArrow}
+                    alt=""
+                    onClick={() => {
+                        let indexVal = currIndex;
+                        if (indexVal === 0) {
+                            indexVal = images.length() - 1;
+                        } else {
+                            indexVal--;
+                        }
+                        setCurrIndex(indexVal);
+                        prev();
+                    }}
+                    className={slide.prev}
+                />
+                <div className={slide.name}>{names[currIndex]}</div>
+                <img
+                    src={rightArrow}
+                    alt=""
+                    onClick={() => {
+                        let indexVal = currIndex;
+                        if (indexVal === images.length - 1) {
+                            indexVal = 0;
+                        } else {
+                            indexVal++;
+                        }
+                        setCurrIndex(indexVal);
+                        next();
+                    }}
+                    className={slide.next}
+                />
+            </div>
         </div>
     );
 };
 
-const NextArrow = ({ onClick }) => {
-    return (
-        <div className={hmc.arrowRight} onClick={onClick}>
-            <img src={rightArrow} alt="" />
-        </div>
-    );
-};
-
-const Hmc = () => {
-    // settings is an js object that we created and we are going to reference it
-
-    const [imageIndex, setImageIndex] = useState(0);
-    const settings = {
-        infinite: true,
-        lazyLoad: true,
-        speed: 800,
-        slidesToShow: 3,
-        slidesToScroll: 1,
-        centerMode: true,
-        centerPadding: 0,
-        nextArrow: <NextArrow />,
-        prevArrow: <PrevArrow />,
-        beforeChange: (current, next) => setImageIndex(next),
-    };
-
-    return (
-        <Slider {...settings}>
-            {images.map((imgg, ind) => (
-                <div
-                    className={ind === imageIndex ? hmc.activeSlide : hmc.slide}
-                >
-                    <img src={imgg} alt={imgg} />
-                </div>
-            ))}
-        </Slider>
-    );
-};
-
-export default Hmc;
+export default HmcSlider;
